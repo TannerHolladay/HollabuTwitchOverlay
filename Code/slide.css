@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family={font_family}");
+
+.widget-EventList {
+    list-style: none;
+    font-weight: 700;
+    font-size: 2em;
+    color: white;
+    font-family: "{font_family}";
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.7), 0 0 2px rgba(0, 0, 0, 0.7), 0 0 3px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    overflow: hidden;
+    width: 50%;
+}
+
+.widget-EventList li {
+    left: 100%;
+		position: absolute;
+  	padding-right: 150px;
+    max-width: 25%;
+    text-align: right;
+    animation: slidein 3s forwards;
+    animation-delay: 4s;
+}
+
+.widget-EventList li:nth-child(2) {
+    animation: slideout 3s forwards;
+}
+
+.widget-EventList span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+
+
+@keyframes slidein {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+      	transform: translateX(-100%);
+    }
+}
+
+@keyframes slideout {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+      	transform: translateX(0);
+    }
+}
